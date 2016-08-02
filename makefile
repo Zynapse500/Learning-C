@@ -4,14 +4,16 @@ CFILES = $(wildcard src/*.c)
 
 EXE = main.exe
 
+LFLAGS = -I ./include
+
 $(EXE): $(CFILES)
 	@echo Compiling $(CFILES)...
-	@$(CC) -o $@ $^
+	@$(CC) -o $@ $^ $(LFLAGS)
 	@echo Done!
 
 #.PHONY: $(EXE)
 
-clean: $(EXE)
+run: $(EXE)
 	@cd ..
 	@echo
 	@echo Executing program...

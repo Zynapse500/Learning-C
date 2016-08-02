@@ -3,9 +3,15 @@
 
 int main()
 {
-	char name[11] = "Christofer";
+	int a = 13;
+	float b = 3;
+	float c = a / b;
 
-	printf("My name is %s\n", name);
+	printf("%d\n", (int) (a / b));
+	printf("%f\n", c);
 
+
+	printf("\n");
+	system("pause");
 	return 0;
 }
